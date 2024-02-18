@@ -13,8 +13,7 @@ body {
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
                     <th scope="col">Role</th>
-                    <th scope="col">Aksi</th>
-                    <th scope="col">Aksi</th>
+                    <th scope="col" colspan="2">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,7 +23,7 @@ body {
                     <td scope="row">10</td>
                     <td scope="row">10</td>
                     <td scope="row">10</td>
-                    <td scope="row">Edit</td>
+                    <td scope="row">Edit</td> 
                     <td scope="row">Delete</td>
                 </tr>
             </tbody>

@@ -1,7 +1,7 @@
 <template>
 
   <div class="card" align="left">
-          <div class="card-header">Register Form</div>
+        <div class="card-header">Register Form</div>
           <div class="card-body"> 
           
               <form  @submit.prevent="saveData">
@@ -56,12 +56,11 @@
                     console.log(data);
                      try 
                        {
-                          alert("saveddddd");
-                          
-                        } 
-                    catch(err) 
+                          alert("brhasil cyak");
+                          this.$router.push({ name: 'Login'})
+                        } catch(err) 
                         {
-                          alert("failed");
+                          alert('failed');
                         }    
                    }
                  )

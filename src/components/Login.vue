@@ -34,7 +34,7 @@ body {
     <div class="col-sm-4">
       <h1 id="judul">LOGIN </h1>
 
-      <form @submit.prevent="LoginData"  >
+      <form @submit.prevent="logindata"  >
         <div class="form-group" align="left">
           <label>Email</label>
           <input
@@ -75,8 +75,8 @@ export default {
     return {
       result: {},
       student: {
-        email: "",
-        password: "",
+        email: '',
+        password: '',
       },
     };
   },
@@ -85,19 +85,15 @@ export default {
     console.log("mounted() called.......");
   },
   methods: {
-    LoginData() {
+    logindata() {
       axios
         .post("http://127.0.0.1:8000/api/logincak", this.student)
         .then(({ data }) => {
           console.log(data);
           try {
-            if (data.status === true) {
               alert("Login Successfully");
               this.$router.push({ name: 'Admin' });
-            } else {
-              alert("Login Gagal Cacakku");
-            }
-          } catch (err) {
+            } catch (err) {
             alert("Error, please try again");
           }
         });

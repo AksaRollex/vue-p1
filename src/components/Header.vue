@@ -19,9 +19,6 @@
         <li class="nav-item">
             <router-link :to="{ name: 'Login' }" class="nav-link">Login</router-link>
         </li>
-        <li class="nav-item">
-            <router-link :to="{ name: 'About' }" class="nav-link">About</router-link>
-        </li>
       </ul>
     </div>
   </div>
