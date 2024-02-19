@@ -13,15 +13,10 @@ body {
   background-color:  rgb(255, 255, 255);
   margin-top: 100px;
   margin-left: 40%;
-  height: 350px;
+  height: 310px;
   border-radius: 10px;
 }
-#iemail {
-  width: 275px;
-}
-#ipass {
-  width: 275px;
-}
+
 #tsave {
   margin-top: 10px;
 }
@@ -30,11 +25,10 @@ body {
 }
 </style>
 <template>
-  <div class="row" id="sek">
-    <div class="col-sm-4">
-      <h1 id="judul">LOGIN </h1>
-
-      <form @submit.prevent="logindata"  >
+  <div class="card" align="left" id="sek">
+    <div class="card-header"> Login </div>
+      <div class="card-body">
+        <form @submit.prevent="logindata"  >
         <div class="form-group" align="left">
           <label>Email</label>
           <input
@@ -55,12 +49,12 @@ body {
             placeholder="Password"
             id="ipass"
           />
-        </div>
+      </div>
 
         <button type="submit" class="btn btn-primary" id="tsave">Login</button>
       </form>
-    </div>
-    <p id="sese">Don't have an account yet?  <br> <router-link :to="{name: 'Register'}">Register Now</router-link></p>
+      </div>
+    <p id="sese">Belum punya akun ? <br> <router-link :to="{name: 'Register'}">Daftar dulu sini cakku </router-link></p>
   </div>
 </template>
 

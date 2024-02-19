@@ -3,8 +3,12 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Admin from '@/components/Admin'
+import DataUser from '@/components/DataUser'
 import User from '@/components/User'
+import Admin from '@/components/Admin'
+import TambahData from '@/components/TambahData'
+import EditData from '@/components/EditData'
+
 Vue.use(Router)
 
 export default new Router({
@@ -25,15 +29,29 @@ export default new Router({
       component: Login
     },
     {
-      path: '/admin',
-      name: 'Admin',
-      component: Admin
+      path: '/datauser',
+      name: 'DataUser',
+      component: DataUser
     },
     {
       path: '/user',
       name: 'User',
       component: User
     },
-
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin
+    },
+    {
+      path: '/tambahdata',
+      name: 'TambahData',
+      component: TambahData
+    },
+    {
+      path: '/editdata',
+      name: 'EditData',
+      component: EditData
+    },
   ]
 })

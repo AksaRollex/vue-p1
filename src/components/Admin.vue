@@ -1,32 +1,29 @@
 <style>
-body {
-    background-color: grey;
+#cyak {
+    margin-top: 20%;
+    text-align: center;
 }
 </style>
 <template>
-    <div class="container">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">Role</th>
-                    <th scope="col" colspan="2">Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-secondary">
-                    <td scope="row">-</td>
-                    <td scope="row">10</td>
-                    <td scope="row">10</td>
-                    <td scope="row">10</td>
-                    <td scope="row">10</td>
-                    <td scope="row">Edit</td> 
-                    <td scope="row">Delete</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="">
+    <HeaderAdmin />
+    <figure>
+      <blockquote class="blockquote" id="cyak">
+        <p class="mb-0">
+          Selamat Datang Di Halaman Admin Cakku !
+        </p>
+      </blockquote>
+    </figure>
+  </div>
 </template>
+
+<script>
+import HeaderAdmin from "@/components/HeaderAdmin.vue";
+
+export default {
+  name: "Admin",
+  components: {
+    HeaderAdmin,
+  },
+};
+</script>

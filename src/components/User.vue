@@ -1,18 +1,29 @@
+<style>
+#cyak {
+    margin-top: 20%;
+    text-align: center;
+}
+</style>
 <template>
-    <div class="container">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">Role</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-    </div>
+  <div class="">
+    <HeaderUser />
+    <figure>
+      <blockquote class="blockquote" id="cyak">
+        <p class="mb-0">
+          Selamat Datang Di Halaman User Cakku !
+        </p>
+      </blockquote>
+    </figure>
+  </div>
 </template>
+
+<script>
+import HeaderUser from '@/components/HeaderUser.vue'
+
+export default {
+    name : 'User',
+    components : {
+        HeaderUser
+    }
+}
+</script>
