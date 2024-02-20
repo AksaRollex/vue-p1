@@ -1,3 +1,4 @@
+
 <template>
   <div class="">
     <HeaderAdmin />
@@ -15,9 +16,9 @@
         <tbody v-for="users in user" :key="users.id">
           <tr class="table-secondary">
             <td scope="row">{{ users.id }}</td>
-            <td scope="row">{{ users.name }}</td>
+            <td scope="row" class="">{{ users.name }}</td>
             <td scope="row">{{ users.email }}</td>
-            <td scope="row">{{ users.role_id }}</td>
+            <td scope="row" class="">{{ users.role_id }}</td>
             <td>
               <router-link
                 :to="{ name: 'EditData', params: { id: users.id } }"
@@ -38,6 +39,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 import HeaderAdmin from "@/components/HeaderAdmin.vue";
@@ -84,4 +86,3 @@ export default {
   },
 };
 </script>
-

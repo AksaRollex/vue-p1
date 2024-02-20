@@ -6,7 +6,7 @@ body {
   width: 300px;
   margin-left: 40%;
   margin-top: 100px;
-  height: 370px;
+  height: 390px;
 }
 #save {
   margin-top: 10px;
@@ -34,17 +34,18 @@ body {
               <input type="password" v-model="student.password" name="password" id="password" class ="form-control"/> 
   
   
-              <input type="submit" value="Save" class="btn btn-success" id="save"> 
-  
-              <p id="cyak"> Wes due akun ta cyak?  <br> <router-link :to="{name: 'Login'}">Login o kene</router-link></p>
+              <input type="submit" value="Save" class="btn btn-primary" id="save"> 
+              
+              <p style="text-align: center; margin-top: 10px;">Sudah Punya Akun ? </p>
+              <router-link :to="{ name: 'Login' }" class="btn btn-danger" id="sksk">Login Disini !</router-link>
 
               </form>
           </div>
       </div>
   </template>
-     
+  
      <script>
-         import Vue from 'vue';
+         import Vue from 'vue'; 
          import axios from 'axios';
          Vue.use(axios)
 

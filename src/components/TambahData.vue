@@ -6,7 +6,7 @@ body {
   width: 300px;
   margin-left: 40%;
   margin-top: 100px;
-  height: 310px;
+  height: 300px;
 }
 #save {
   margin-top: 10px;
@@ -14,6 +14,9 @@ body {
 #cyak {
   text-align: center;
   margin-top: 15px;
+}
+#sds {
+  margin-top:10px;
 }
 </style>
 <template>
@@ -50,7 +53,9 @@ body {
           class="form-control"
         />
 
-        <input type="submit" value="Save" class="btn btn-primary" id="save" />
+        <input type="submit" value="Save" class="btn btn-primary" id="save" to="/Admin"/>
+        <router-link :to="{ name: 'Admin' }" class="btn btn-danger" id="sds">Batal</router-link>
+        <!-- <router-link :to="{ name: 'Admin' }" class="btn btn-danger" style="margin-top: 10px;">Batal</router-link> -->
       </form>
     </div>
   </div>
@@ -92,7 +97,7 @@ export default {
           console.log(data);
           try {
             alert("brhasil cyak");
-            this.$router.push({ name: "TambahData" });
+            this.$router.push({ name: "DataUser" });
           } catch (err) {
             alert("failed");
           }

@@ -9,11 +9,10 @@ body {
 }
 #sek {
   width: 300px;
-  border: 1px solid beige;
   background-color:  rgb(255, 255, 255);
   margin-top: 100px;
   margin-left: 40%;
-  height: 310px;
+  height: 330px;
   border-radius: 10px;
 }
 
@@ -23,9 +22,12 @@ body {
 #sese{
   text-align: center;
 }
+#sksk {
+  margin-left: 28%;
+}
 </style>
 <template>
-  <div class="card" align="left" id="sek">
+  <div class="card " align="left" id="sek">
     <div class="card-header"> Login </div>
       <div class="card-body">
         <form @submit.prevent="logindata"  >
@@ -53,8 +55,10 @@ body {
 
         <button type="submit" class="btn btn-primary" id="tsave">Login</button>
       </form>
+      <p style="text-align: center; margin-top: 10px;">Belum Punya Akun ? </p>
+    <router-link :to="{ name: 'Register' }" class="btn btn-danger" id="sksk">Daftar Dulu !</router-link>
       </div>
-    <p id="sese">Belum punya akun ? <br> <router-link :to="{name: 'Register'}">Daftar dulu sini cakku </router-link></p>
+
   </div>
 </template>
 
@@ -83,14 +87,25 @@ export default {
       axios
         .post("http://127.0.0.1:8000/api/logincak", this.student)
         .then(({ data }) => {
-          console.log(data);
-          try {
-              alert("Login Successfully");
+          // Ambil data dari respons
+          const role = data.role
+          console.log("role id=", data.role)
+          if (data.token) {
+            // Simpan token di localStorage
+            localStorage.setItem('jwt', data.token);
+            if(role === 1){
+              // Redirect ke halaman HelloWorld setelah login berhasil
               this.$router.push({ name: 'Admin' });
-            } catch (err) {
-            alert("Error, please try again");
+              alert("Login Success as Admin");
+            }else if(role === 2){
+              // Redirect ke halaman HelloWorld setelah login berhasil
+              this.$router.push({ name: 'User' });
+              alert("Login Success as User");
+            }else{
+              alert('user tidak terdaftar')
+            }
           }
-        });
+        })
     },
   },
 };

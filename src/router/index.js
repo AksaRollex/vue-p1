@@ -11,12 +11,13 @@ import EditData from '@/components/EditData'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      meta: { requiresAuth: true }
     },
     {
       path: '/register',
@@ -31,27 +32,49 @@ export default new Router({
     {
       path: '/datauser',
       name: 'DataUser',
-      component: DataUser
+      component: DataUser,
+      meta: { requiresAuth: true }
     },
     {
       path: '/user',
       name: 'User',
-      component: User
+      component: User,
+      meta: { requiresAuth: true }
     },
     {
       path: '/admin',
       name: 'Admin',
-      component: Admin
+      component: Admin,
+      meta: { requiresAuth: true }
     },
     {
       path: '/tambahdata',
       name: 'TambahData',
-      component: TambahData
+      component: TambahData,
+      meta: { requiresAuth: true }
     },
     {
       path: '/editdata',
       name: 'EditData',
-      component: EditData
+      component: EditData,
+      meta: { requiresAuth: true }
     },
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(record => record.meta.requiresAuth)){
+    if(!localStorage.getItem('jwt')){
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath}
+      });
+    }else{
+      next()
+    }
+  }else{
+    next()
+  }
+})
+
+export default router
