@@ -1,9 +1,13 @@
-
+<style>
+#body {
+  background-color: #333333;
+}
+</style>
 <template>
   <div class="">
     <HeaderAdmin />
     <div class="container mt-3">
-      <table class="table table-hover">
+      <table class="table table-hover table-danger">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -14,11 +18,11 @@
           </tr>
         </thead>
         <tbody v-for="users in user" :key="users.id">
-          <tr class="table-secondary">
+          <tr class="table-primary">
             <td scope="row">{{ users.id }}</td>
-            <td scope="row" class="">{{ users.name }}</td>
+            <td scope="row">{{ users.name }}</td>
             <td scope="row">{{ users.email }}</td>
-            <td scope="row" class="">{{ users.role_id }}</td>
+            <td scope="row">{{ users.role_id }}</td>
             <td>
               <router-link
                 :to="{ name: 'EditData', params: { id: users.id } }"

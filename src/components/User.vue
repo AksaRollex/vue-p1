@@ -1,4 +1,7 @@
 <style>
+body {
+  background-color: #333333;
+}
 #cyak {
     margin-top: 20%;
     text-align: center;
@@ -9,9 +12,7 @@
     <HeaderUser />
     <figure>
       <blockquote class="blockquote" id="cyak">
-        <p class="mb-0">
-          Selamat Datang Di Halaman User Cakku !
-        </p>
+        <h1 class="hero-title mt-5" style="color: white; text-align: center;">Selamat Datang User !</h1>
       </blockquote>
     </figure>
   </div>

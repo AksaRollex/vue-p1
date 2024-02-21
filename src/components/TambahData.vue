@@ -1,22 +1,24 @@
 <style>
 body {
-  background-color: grey;
+  background-color: #333333;
 }
 #container {
   width: 300px;
   margin-left: 40%;
   margin-top: 100px;
-  height: 300px;
+  height: 350px;
 }
-#save {
+#s {
   margin-top: 10px;
+  width: 265px;
 }
 #cyak {
   text-align: center;
   margin-top: 15px;
 }
-#sds {
+#s1 {
   margin-top:10px;
+   width: 265px;
 }
 </style>
 <template>
@@ -53,8 +55,8 @@ body {
           class="form-control"
         />
 
-        <input type="submit" value="Save" class="btn btn-primary" id="save" to="/Admin"/>
-        <router-link :to="{ name: 'Admin' }" class="btn btn-danger" id="sds">Batal</router-link>
+        <input type="submit" value="Save" class="btn btn-primary" id="s" to="/Admin"/>
+        <router-link :to="{ name: 'Admin' }" class="btn btn-danger" id="s1">Batal</router-link>
         <!-- <router-link :to="{ name: 'Admin' }" class="btn btn-danger" style="margin-top: 10px;">Batal</router-link> -->
       </form>
     </div>
@@ -96,10 +98,10 @@ export default {
         .then(({ data }) => {
           console.log(data);
           try {
-            alert("brhasil cyak");
+            alert("Data Berhasil Di Tambahkan ! ");
             this.$router.push({ name: "DataUser" });
           } catch (err) {
-            alert("failed");
+            alert("Data Gagal Di Tambahkan ! ");
           }
         });
     },

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" style="width: 100vw;">
   <div class="container-fluid">
     <a class="navbar-brand" href="">
-      <router-link :to="{ name: 'Admin' }" class="nav-link">MCFLYON</router-link>
+      <router-link :to="{ name: 'Admin' }" class="nav-link">MCFLYON ADMIN</router-link>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,8 @@ export default {
       logout(){
             localStorage.removeItem('jwt')
             this.$router.push({name : 'Login'})
-            alert('log out berhasil cyak')
+            alert('Logout Berhasil !')
+            alert('Terimakasih Admin !')
             }
     }
 }

@@ -1,6 +1,6 @@
 <style>
 body {
-  background-color: grey;
+  background-color: #333333;
 }
 #container {
   width: 300px;
@@ -9,16 +9,17 @@ body {
   height: 390px;
 }
 #save {
-  margin-top: 10px;
+  margin-top: 14px;
+  margin-left: 28%;
+  width: 120px;
 }
-#cyak {
-  text-align: center;
-  margin-top: 15px;
+#sksk {
+  margin-left: 28%;
 }
 </style>
 <template>
   <div class="card" align="left" id="container">
-        <div class="card-header">Register</div>
+        <div class="card-header">Register / Daftar </div>
           <div class="card-body"> 
           
               <form  @submit.prevent="saveData">
@@ -75,7 +76,8 @@ body {
                     console.log(data);
                      try 
                        {
-                          alert("brhasil cyak")
+                          alert("Pendaftaran Pengguna Berhasil !")
+                          alert("Login Dengan Akun Yang Telah Kamu Daftarkan !")
                           this.$router.push({ name: 'Login'})
                         } catch(err) 
                         {

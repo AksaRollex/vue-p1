@@ -1,6 +1,6 @@
 <style>
 body {
-  background-color: grey;
+  background-color: #333333;
 }
 #judul {
   text-align: center;
@@ -17,13 +17,16 @@ body {
 }
 
 #tsave {
-  margin-top: 10px;
+  margin-top: 14px;
+  margin-left: 28%;
+  width: 120px;
 }
 #sese{
   text-align: center;
 }
 #sksk {
   margin-left: 28%;
+  width: 120px;
 }
 </style>
 <template>
@@ -96,11 +99,13 @@ export default {
             if(role === 1){
               // Redirect ke halaman HelloWorld setelah login berhasil
               this.$router.push({ name: 'Admin' });
-              alert("Login Success as Admin");
+              alert("Berhasil Login Sebagai Admin !");
+              alert("Selamat Datang Admin !");
             }else if(role === 2){
               // Redirect ke halaman HelloWorld setelah login berhasil
               this.$router.push({ name: 'User' });
-              alert("Login Success as User");
+              alert("Berhasil Login Sebagai Pengguna !");
+              alert("Selamat Datang Pengguna !");
             }else{
               alert('user tidak terdaftar')
             }
