@@ -22,6 +22,7 @@ body {
 }
 </style>
 <template>
+  <div data-aos="fade-down">
     <div class="">
         <HeaderAdmin />
         <div class="card" align="left" id="container">
@@ -62,6 +63,8 @@ body {
     </div>
   </div>
     </div>
+  </div>
+    
   
 </template>
 

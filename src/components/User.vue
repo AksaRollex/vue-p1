@@ -8,7 +8,8 @@ body {
 }
 </style>
 <template>
-  <div class="">
+  <div data-aos="fade-down">
+    <div class="">
     <HeaderUser />
     <figure>
       <blockquote class="blockquote" id="cyak">
@@ -16,6 +17,8 @@ body {
       </blockquote>
     </figure>
   </div>
+  </div>
+  
 </template>
 
 <script>

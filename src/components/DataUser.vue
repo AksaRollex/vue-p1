@@ -4,7 +4,8 @@
 }
 </style>
 <template>
-  <div class="">
+  <div data-aos="fade-down">
+    <div class="">
     <HeaderAdmin />
     <div class="container mt-3">
       <table class="table table-hover table-danger">
@@ -42,6 +43,8 @@
       </table>
     </div>
   </div>
+  </div>
+  
 </template>
 
 
