@@ -35,17 +35,17 @@ body {
 </style>
 <template>
   <div class="card " align="left" id="sek">
-    <div class="card-header"> Login Dengan Email</div>
+    <div class="card-header"> Login Dengan Username </div>
       <div class="card-body">
         <form @submit.prevent="logindata"  >
 
         <div class="form-group" align="left">
-          <label>Email</label>
+          <label>Username</label>
           <input
-            type="email"
-            v-model="student.email"
+            type="text"
+            v-model="student.name"
             class="form-control"
-            placeholder="Email"
+            placeholder="Username"
             id=""
           />
         </div>
@@ -62,7 +62,7 @@ body {
       </div>
 
         <button type="submit" class="btn btn-primary" id="tsave">Login</button>
-        <router-link :to="{ name: 'LoginUsername' }" class="btn btn-primary" id="sksk">Login Dengan Username !</router-link>
+        <router-link :to="{ name: 'Login' }" class="btn btn-primary" id="sksk">Login Dengan Email !</router-link>
       </form>
       <p style="text-align: center; margin-top: 10px;">Belum Punya Akun ? </p>
     <router-link :to="{ name: 'Register' }" class="btn btn-danger" id="sksk2">Daftar Dulu !</router-link>
@@ -83,7 +83,6 @@ export default {
       result: {},
       student: {
         name:'',
-        email: '',
         password: '',
       },
     };
@@ -95,7 +94,7 @@ export default {
   methods: {
     logindata() {
       axios
-        .post("http://127.0.0.1:8000/api/logincak", this.student)
+        .post("http://127.0.0.1:8000/api/logincak2", this.student)
         .then(({ data }) => {
           // Ambil data dari respons
           const role = data.role

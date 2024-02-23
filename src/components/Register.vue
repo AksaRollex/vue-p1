@@ -24,7 +24,7 @@ body {
           
               <form  @submit.prevent="saveData">
               
-              <label>First Name</label>
+              <label>Username</label>
               <input type="text" v-model="student.name" name="name" id="name" class ="form-control"/> 
   
         

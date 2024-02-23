@@ -8,6 +8,7 @@ import User from '@/components/User'
 import Admin from '@/components/Admin'
 import TambahData from '@/components/TambahData'
 import EditData from '@/components/EditData'
+import LoginUsername from '@/components/LoginUsername'
 
 Vue.use(Router)
 
@@ -58,6 +59,12 @@ const router = new Router({
       name: 'EditData',
       component: EditData,
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/loginusername',
+      name: 'LoginUsername',
+      component: LoginUsername,
+   
     },
   ]
 })
